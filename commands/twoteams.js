@@ -19,8 +19,8 @@ module.exports = {
 
         const embed = new MessageEmbed()
         .setTitle('Team Generator')
-        .setColor(0xff0000)
-        .setDescription(`Team :unicorn: ${firstHalf}\nTeam :tractor: ${secondHalf}`)
+        .setColor(0xf051e5)
+        .setDescription(`Team 1: ${firstHalf}\nTeam 2: ${secondHalf}`)
         message.delete()
         message.channel.send(embed)
         }
