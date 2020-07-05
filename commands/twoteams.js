@@ -12,15 +12,15 @@ module.exports = {
                 args[j] = k
               }
         const half = Math.ceil(args.length / 2);    
-        const firstHalf = args.splice(0, half)
-        const secondHalf = args.splice(-half)
+        const firstHalf = args.splice(0, half).join(" ")
+        const secondHalf = args.splice(-half).join(" ")
             // message.channel.send(firstHalf)
             // message.channel.send(secondHalf)
 
         const embed = new MessageEmbed()
         .setTitle(':fire::fire::exclamation: Team Generator :exclamation::fire::fire:')
         .setColor(0xff0000)
-        .setDescription(`Team 1 ${firstHalf} Team 2 ${secondHalf}`)
+        .setDescription(`Team 1 ${firstHalf}\nTeam 2 ${secondHalf}`)
         message.delete()
         message.channel.send(embed)
         }
