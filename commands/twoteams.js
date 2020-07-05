@@ -10,8 +10,8 @@ module.exports = {
                 args[j] = k
               }
         const half = Math.ceil(args.length / 2);    
-        const firstHalf = list.splice(0, half)
-        const secondHalf = list.splice(-half)
+        const firstHalf = args.splice(0, half)
+        const secondHalf = args.splice(-half)
             message.channel.send(firstHalf)
             message.channel.send(secondHalf)
         }
