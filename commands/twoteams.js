@@ -12,7 +12,8 @@ module.exports = {
         const half = Math.ceil(args.length / 2);    
         const firstHalf = list.splice(0, half)
         const secondHalf = list.splice(-half)
-            message.channel.send(firstHalf + '\n' + secondHalf);
+            message.channel.send(firstHalf);
+            message.channel.send(secondHalf);
         }
         else {
             message.channel.send('You have to specify atleast 3 members')
