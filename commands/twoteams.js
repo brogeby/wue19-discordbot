@@ -16,7 +16,7 @@ module.exports = {
             message.channel.send(secondHalf)
         }
         else {
-            message.channel.send('You have to specify atleast 3 members')
+            message.channel.send('You have to name atleast 3 players')
         }
     }
 }
