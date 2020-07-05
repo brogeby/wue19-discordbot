@@ -12,8 +12,15 @@ module.exports = {
         const half = Math.ceil(args.length / 2);    
         const firstHalf = args.splice(0, half)
         const secondHalf = args.splice(-half)
-            message.channel.send(firstHalf)
-            message.channel.send(secondHalf)
+            // message.channel.send(firstHalf)
+            // message.channel.send(secondHalf)
+
+        const embed = new MessageEmbed()
+        .setTitle(':fire::fire::exclamation: Team Generator :exclamation::fire::fire:')
+        .setColor(0xff0000)
+        .setDescription(firstHalf + secondHalf)
+        message.delete()
+        message.channel.send(embed)
         }
         else {
             message.channel.send('You have to name atleast 3 players')
