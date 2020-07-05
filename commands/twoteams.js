@@ -1,3 +1,5 @@
+const { Client, MessageEmbed } = require('discord.js')
+
 module.exports = {
     name: 'twoteams',
     description: "Splits the names into two random groups",
@@ -18,7 +20,7 @@ module.exports = {
         const embed = new MessageEmbed()
         .setTitle(':fire::fire::exclamation: Team Generator :exclamation::fire::fire:')
         .setColor(0xff0000)
-        .setDescription(firstHalf + secondHalf)
+        .setDescription(`Team 1 ${firstHalf} Team 2 ${secondHalf}`)
         message.delete()
         message.channel.send(embed)
         }
