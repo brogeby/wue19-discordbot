@@ -1,7 +1,7 @@
 const { Client, MessageEmbed } = require('discord.js')
 
 module.exports = {
-    name: 'racerragnar',
+    name: 'ragnar',
     description: "this checks the role ID!",
     execute(message, args) {
         const embed = new MessageEmbed()
