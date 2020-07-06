@@ -12,8 +12,8 @@ module.exports = {
                 args[j] = k
               }
         const half = Math.ceil(args.length / 2);    
-        const firstHalf = args.splice(0, half).join(" ")
-        const secondHalf = args.splice(-half).join(" ")
+        const firstHalf = args.splice(0, half).join("\n")
+        const secondHalf = args.splice(-half).join("\n")
             // message.channel.send(firstHalf)
             // message.channel.send(secondHalf)
 
