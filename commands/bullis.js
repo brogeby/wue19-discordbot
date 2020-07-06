@@ -2,7 +2,7 @@ const { Client, MessageEmbed } = require('discord.js')
 
 module.exports = {
     name: 'bullis',
-    description: "this checks the role ID!",
+    description: "Bullis is too good",
     execute(message, args) {
         const embed = new MessageEmbed()
         .setTitle('Bullis is to good for this world :drool:')
