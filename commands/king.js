@@ -1,10 +1,11 @@
 const { Client, MessageEmbed } = require('discord.js')
-let myRole = message.guild.roles.find(role => role.name === "admin");
 
 module.exports = {
     name: 'king',
     description: "Knugen",
     execute(message, args) {
+        let myRole = message.guild.roles.find(role => role.name === "admin");
+
         if(message.member.roles.has(myRole)) {
             let text = args.join(" ")
             const embed = new MessageEmbed()
