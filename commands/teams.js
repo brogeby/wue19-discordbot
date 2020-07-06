@@ -1,7 +1,7 @@
 const { Client, MessageEmbed } = require('discord.js')
 
 module.exports = {
-    name: 'twoteams',
+    name: 'teams',
     description: "Splits the names into two random groups",
     execute(message, args) {
         if (args.length > 2) {
@@ -20,7 +20,11 @@ module.exports = {
         const embed = new MessageEmbed()
         .setTitle('Team Generator')
         .setColor(0xf051e5)
-        .setDescription(`Team 1: ${firstHalf}\nTeam 2: ${secondHalf}`)
+        // .setDescription(`Team 1: ${firstHalf}\nTeam 2: ${secondHalf}`)
+        .addFields(
+            { name: 'Team 1', value: `${firstHalf}`, inline: true },
+            { name: 'Team 1', value: `${secondHalf}`, inline: true }
+        )
         message.delete()
         message.channel.send(embed)
         }
