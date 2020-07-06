@@ -1,3 +1,5 @@
+const { Client, Role, Guild } = require('discord.js')
+
 module.exports = {
     name: 'blah',
     description: "Blah blah blah",
