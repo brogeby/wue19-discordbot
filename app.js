@@ -16,10 +16,10 @@ client.on("ready", () => {
 });
 
 client.on('guildMemberAdd', member => {
-    const channel = member.guild.channels.cache.find(ch => ch.name === 'test');
+    const channel = member.guild.channels.cache.find(ch => ch.name === 'general');
     if (!channel) return;
     channel.send(`Välkommen till GUBP, ${member}, Glöm inte all läsa reglerna!`);
-    let role = member.guild.roles.cache.find(role => role.name === "noob");
+    let role = member.guild.roles.cache.find(role => role.name === "Oäkting");
     member.roles.add(role);
   });
 
