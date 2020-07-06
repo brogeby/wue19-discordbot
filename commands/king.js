@@ -2,8 +2,9 @@ const { Client, MessageEmbed } = require('discord.js')
 
 module.exports = {
     name: 'king',
-    description: "this checks the role ID!",
+    description: "Knugen",
     execute(message, args) {
+        if (!member.roles.cache.some(role => role.name === 'admin')) return
         let text = args.join(" ")
         const embed = new MessageEmbed()
         .setTitle('KUNGEN')

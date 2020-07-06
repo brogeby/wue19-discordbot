@@ -23,7 +23,7 @@ module.exports = {
         // .setDescription(`Team 1: ${firstHalf}\nTeam 2: ${secondHalf}`)
         .addFields(
             { name: 'Team 1', value: `${firstHalf}`, inline: true },
-            { name: 'Team 1', value: `${secondHalf}`, inline: true }
+            { name: 'Team 2', value: `${secondHalf}`, inline: true }
         )
         message.delete()
         message.channel.send(embed)
