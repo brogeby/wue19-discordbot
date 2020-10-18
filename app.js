@@ -18,8 +18,8 @@ client.on("ready", () => {
 client.on('guildMemberAdd', member => {
     const channel = member.guild.channels.cache.find(ch => ch.name === 'general');
     if (!channel) return;
-    channel.send(`Välkommen till GUBP, ${member}, Glöm inte all läsa reglerna!`);
-    let role = member.guild.roles.cache.find(role => role.name === "Oäkting");
+    channel.send(`Välkommen till Brogebys Discord-server, ${member}!`);
+    let role = member.guild.roles.cache.find(role => role.name === "Superman");
     member.roles.add(role);
   });
 
