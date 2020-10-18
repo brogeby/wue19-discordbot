@@ -1,7 +1,10 @@
 require('dotenv').config(); 
 const Discord = require("discord.js");
-const client = new Discord.Client();
+const client = new Discord.Client({
+  partials: ['MESSAGE', 'REACTION']
+});
 const fs = require('fs')
+
 
 client.commands = new Discord.Collection()
 
@@ -39,5 +42,55 @@ client.on("message", message => {
         message.reply('there was an error trying to execute that command!');
     }
 });
+
+client.on('messageReactionAdd', (reaction, user) => {
+  const { name } = reaction.emoji
+  const member = reaction.message.guild.members.cache.get(user.id)
+  if(reaction.message.id === '767506548385251338') {
+    switch (name) {
+      //PHP
+      case '🍎':
+        member.roles.add('767505424580083753')
+      break;
+      //Frontend
+      case '🍇':
+        member.roles.add('767505381550850118')
+      break;
+      //Javascript
+      case '🍑':
+        member.roles.add('767505402270974002')
+      break;
+      //Backend
+      case '🍌':
+        member.roles.add('767505355839504395')
+      break;
+    }
+  }
+})
+
+client.on('messageReactionRemove', (reaction, user) => {
+  const { name } = reaction.emoji
+  const member = reaction.message.guild.members.cache.get(user.id)
+  if(reaction.message.id === '767506548385251338') {
+    switch (name) {
+      //PHP
+      case '🍎':
+        member.roles.remove('767505424580083753')
+      break;
+      //Frontend
+      case '🍇':
+        member.roles.remove('767505381550850118')
+      break;
+      //Javascript
+      case '🍑':
+        member.roles.remove('767505402270974002')
+      break;
+      //Backend
+      case '🍌':
+        member.roles.remove('767505355839504395')
+      break;
+    }
+  }
+})
 
 client.login(process.env.CLIENT_TOKEN);
